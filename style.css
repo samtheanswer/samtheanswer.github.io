@@ -1,0 +1,126 @@
+body {
+    background-color: #2E3235;
+    color: #EEB902;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 10px;
+    color: #F45D01;
+}
+
+p {
+    height: 40px;
+}
+
+.band-question {
+    margin-top: 20px;
+    font-size: 1.3em;
+    line-height: 30px;
+}
+
+.band-select {
+    height: 30px;
+    color: #EEB902;
+    border: 2px solid #EEB902;
+    border-radius: 10px;
+    margin: 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    line-height: 25px;
+}
+
+.band-select:hover {
+    color: white;
+    background-color: #EEB902;
+}
+
+.col-description {
+    color: #4280D7;
+}
+
+.color-block {
+    height: 30px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+.color-block:hover {
+    border: 2px solid #F45D01;
+}
+
+.result{
+    width: 75%;
+    margin: 20px auto;
+    font-size: 32px;
+}
+
+.result p {
+    height: 100px;
+    line-height: 100px;
+    margin: auto;
+}
+
+.black {
+    background-color: black;
+}
+
+.brown {
+    background-color: brown;
+}
+
+.red {
+    background-color: red;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.gray {
+    background-color: gray;
+}
+
+.white {
+    background-color: white;
+}
+
+.gold {
+    background-color: gold;
+}
+
+.silver {
+    background-color: silver;
+}
+
+.transparent {
+    background-color: transparent;
+    border: none;
+    cursor: default;
+}
+
+.transparent:hover {
+    border: none;
+    cursor: default;
+}
+
+.table {
+    width: 30%;
+    margin: 50px auto;
+    background-color: whitesmoke;
+}

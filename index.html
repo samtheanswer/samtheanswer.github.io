@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Resistor Color Calculator</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <script type="text/javascript" src="script.js" defer></script>
+    </head>
+    <body>
+        <h1>Resistor Color Calculator</h1>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-6 text-right band-question">How many color bands on the resistor?</div>
+                <div class="col-6">
+                    <div class="row">
+                        <div id="three-button" class="col-1 text-center band-select">3</div>
+                        <div id="four-button" class="col-1 text-center band-select">4</div>
+                        <div id="five-button" class="col-1 text-center band-select">5</div>
+                        <div id="six-button" class="col-1 text-center band-select">6</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-8">
+                    <div class="row">
+                        <div class="col-2 first-digit">
+                            <p class="text-center col-description">First Digit</p>
+                            <div class="row color-block transparent"></div>
+                            <div class="row color-block transparent"></div>
+                            <div id="one-black" class="row color-block black" title="0"></div>
+                            <div id="one-brown" class="row color-block brown" title="1"></div>
+                            <div id="one-red" class="row color-block red" title="2"></div>
+                            <div id="one-orange" class="row color-block orange" title="3"></div>
+                            <div id="one-yellow" class="row color-block yellow" title="4"></div>
+                            <div id="one-green" class="row color-block green" title="5"></div>
+                            <div id="one-blue" class="row color-block blue" title="6"></div>
+                            <div id="one-purple" class="row color-block purple" title="7"></div>
+                            <div id="one-gray" class="row color-block gray" title="8"></div>
+                            <div id="one-white" class="row color-block white" title="9"></div>
+                        </div>
+                        <div class="col-2 second-digit">
+                            <p class="text-center col-description">Second Digit</p>
+                            <div class="row color-block transparent"></div>
+                            <div class="row color-block transparent"></div>
+                            <div id="two-black" class="row color-block black" title="0"></div>
+                            <div id="two-brown" class="row color-block brown" title="1"></div>
+                            <div id="two-red" class="row color-block red" title="2"></div>
+                            <div id="two-orange" class="row color-block orange" title="3"></div>
+                            <div id="two-yellow" class="row color-block yellow" title="4"></div>
+                            <div id="two-green" class="row color-block green" title="5"></div>
+                            <div id="two-blue" class="row color-block blue" title="6"></div>
+                            <div id="two-purple" class="row color-block purple" title="7"></div>
+                            <div id="two-gray" class="row color-block gray" title="8"></div>
+                            <div id="two-white" class="row color-block white" title="9"></div>
+                        </div>
+                        <div id="third-column" class="col-2 third-digit" hidden>
+                            <p class="text-center col-description">Third Digit</p>
+                            <div class="row color-block transparent"></div>
+                            <div class="row color-block transparent"></div>
+                            <div id="three-black" class="row color-block black" title="0"></div>
+                            <div id="three-brown" class="row color-block brown" title="1"></div>
+                            <div id="three-red" class="row color-block red" title="2"></div>
+                            <div id="three-orange" class="row color-block orange" title="3"></div>
+                            <div id="three-yellow" class="row color-block yellow" title="4"></div>
+                            <div id="three-green" class="row color-block green" title="5"></div>
+                            <div id="three-blue" class="row color-block blue" title="6"></div>
+                            <div id="three-purple" class="row color-block purple" title="7"></div>
+                            <div id="three-gray" class="row color-block gray" title="8"></div>
+                            <div id="three-white" class="row color-block white" title="9"></div>
+                        </div>
+                        <div class="col-2 multiplier">
+                            <p class="text-center col-description">Multiplier</p>
+                            <div id="mul-silver" class="row color-block silver" title="x0.01"></div>
+                            <div id="mul-gold" class="row color-block gold" title="x0.1"></div>
+                            <div id="mul-black" class="row color-block black" title="x1"></div>
+                            <div id="mul-brown" class="row color-block brown" title="x10"></div>
+                            <div id="mul-red" class="row color-block red" title="x100"></div>
+                            <div id="mul-orange" class="row color-block orange" title="x1,000"></div>
+                            <div id="mul-yellow" class="row color-block yellow" title="x10,000"></div>
+                            <div id="mul-green" class="row color-block green" title="x100,000"></div>
+                            <div id="mul-blue" class="row color-block blue" title="x1,000,000"></div>
+                            <div id="mul-purple" class="row color-block purple" title="x10,000,000"></div>
+                        </div>
+                        <div id="tolerance-column" class="col-2 tolerance" hidden>
+                            <p class="text-center col-description">Tolerance</p>
+                            <div id="tol-silver" class="row color-block silver" title="&plusmn;10%"></div>
+                            <div id="tol-gold" class="row color-block gold" title="&plusmn;5%"></div>
+                            <div class="row color-block transparent"></div>
+                            <div id="tol-brown" class="row color-block brown" title="&plusmn;1%"></div>
+                            <div id="tol-red" class="row color-block red" title="&plusmn;2%"></div>
+                            <div class="row color-block transparent"></div>
+                            <div class="row color-block transparent"></div>
+                            <div id="tol-green" class="row color-block green" title="&plusmn;0.5%"></div>
+                            <div id="tol-blue" class="row color-block blue" title="&plusmn;0.25%"></div>
+                            <div id="tol-purple" class="row color-block purple" title="&plusmn;0.1%"></div>
+                            <div id="tol-gray" class="row color-block gray" title="&plusmn;0.05%"></div>
+                        </div>
+                        <div id="temp-co-column" class="col-2 tolerance" hidden>
+                            <p class="text-center col-description">Temperature Coefficient</p>
+                            <div class="row color-block transparent"></div>
+                            <div class="row color-block transparent"></div>
+                            <div class="row color-block transparent"></div>
+                            <div id="temp-co-brown" class="row color-block brown" title="100ppm"></div>
+                            <div id="temp-co-red" class="row color-block red" title="50ppm"></div>
+                            <div id="temp-co-orange" class="row color-block orange" title="15ppm"></div>
+                            <div id="temp-co-yellow" class="row color-block yellow" title="25ppm"></div>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="row result"><p id="ohm"></p></div>
+                    <div class="row result"><p id="tolerance"></p></div>
+                    <div class="row result"><p id="temp-co"></p></div>
+                </div>
+            </div>
+        </div>
+
+
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td style="width:120px;">Colour</td>
+                    <td style="width:120px;">Digit</td>
+                    <td style="width:120px;">Multiplier</td>
+                    <td style="width: 120px;">Tolerance</td>
+                </tr>
+                <tr>
+                    <td class="blacker"><span class="white">Black</span></td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #a52a2a;"><span class="black">Brown</span></td>
+                    <td>1</td>
+                    <td>10</td>
+                    <td>± 1%</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #ff0000;"><span class="black">Red</span></td>
+                    <td>2</td>
+                    <td>100</td>
+                    <td>± 2%</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #ffa500;"><span class="black">Orange</span></td>
+                    <td>3</td>
+                    <td>1,000</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #ffff00;"><span class="black">Yellow</span></td>
+                    <td>4</td>
+                    <td>10,000</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #00b050;"><span class="white">Green</span></td>
+                    <td>5</td>
+                    <td>100,000</td>
+                    <td>± 0.5%</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #0070c0;"><span class="white">Blue</span></td>
+                    <td>6</td>
+                    <td>1,000,000</td>
+                    <td>± 0.25%</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #ff00ff;"><span class="white">Violet</span></td>
+                    <td>7</td>
+                    <td>10,000,000</td>
+                    <td>± 0.1%</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #737373;"><span class="white">Grey</span></td>
+                    <td>8</td>
+                    <td></td>
+                    <td>± 0.05%</td>
+                </tr>
+                <tr>
+                    <td class="whiter"><span class="black">White</span></td>
+                    <td>9</td>
+                    <td></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #e1d700;"><span class="black">Gold</span></td>
+                    <td></td>
+                    <td>0.1</td>
+                    <td>± 5%</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #d9d9d9;"><span class="black">Silver</span></td>
+                    <td></td>
+                    <td>0.01</td>
+                    <td>± 10%</td>
+                </tr>
+                <tr>
+                    <td><span class="black">None</span></td>
+                    <td></td>
+                    <td></td>
+                    <td>± 20%</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
